@@ -1,28 +1,15 @@
-/* Universal Styles
-*/
+/* Universal Styles */
 
 html {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
 
-/* Set screen sizes
- */
- .root {
-   --tablet-size: 768px;
-   --mobile-size: 480px;
- }
-
-/* .main-content contains everything except the header, to space the content
-     from the top menu bar (header)
- */
 .main-content {
   position: relative;
   top: 5.3125rem; /* To offset for fixed header. */
 }
 
-/* used multiple places to center the text.
- */
 .center {
   text-align: center;
 }
@@ -52,10 +39,10 @@ html {
 
 header {
   position: fixed;
+  z-index: 100;
   width: 100%;
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
-  z-index: 5;
 }
 
 header .content {
@@ -131,18 +118,17 @@ header .mobile {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  position: relative;
   height: 43.5rem;
-  background-image: url("../images/banner-landingpage.jpg");
-  background-repeat: no-repeat;
+  background-image: url('../images/banner-landingpage.jpg');
+  background-position: bottom;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #sign-up-cta {
-  display: flex;
-  position: absolute;
-  top: 170px;
-  left: 100px;
+  position: relative;
+  top: 171px;
+  left: 10%;
   padding: 0 5rem 2.5rem 5rem;
   border: solid 1px #979797;
   border-radius: 4px;
@@ -247,19 +233,17 @@ header .mobile {
 }
 
 .feature .image-container {
-  display: flex;
-  justify-content: center;
+  width: 90%;
+  height: 65%;
   margin: 0 auto;
 }
 
-.feature img {
-  width: 90%;
-  height: 65%;
+.feature .content {
+  padding: 2.5rem 0;
 }
 
 .feature h2 {
   padding-bottom: .5rem;
-  margin-top: 40px;
   font-size: 2.25rem;
   font-weight: bold;
   color: #4a4a4a;
@@ -295,6 +279,10 @@ header .mobile {
     margin: 0;
     padding: 1.25rem 1rem 0 1rem;
   }
+
+  .feature .content {
+    padding: 1.25rem 0 1.875rem 0;
+  }
 }
 
 /* Filters Section */
@@ -324,14 +312,8 @@ header .mobile {
 
 #filters-section .images-container {
   display: flex;
-  justify-content: center;
   max-width: 100%;
   padding: 0 1%;
-}
-
-#filters-section .images-container .image-container img{
-  max-width: 100%;
-  height: auto;
 }
 
 @media only screen and (max-width: 760px) {
@@ -421,7 +403,7 @@ footer .copyright {
   flex-grow: 1;
 }
 
-@media only screen and (min-width: 760px) {
+@media only screen and (max-width: 760px) {
   footer .content {
     font-size: .625rem;
   }
